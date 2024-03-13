@@ -1,14 +1,18 @@
 const sender = require("../config/emailConfig");
+const {EMAIL_ID} = require("../config/serverConfig");
 
-const sendBasicEmail = async (mailFrom,mailTo,mailSubject,mailBody)=>{
+const sendBasicEmail =(mailTo,mailSubject,mailBody)=>{
     try {
-        const response =await sender.sendMail({
-            from:mailFrom,
+        sender.sendMail({
             to:mailTo,
             subject:mailSubject,
             text:mailBody,
+        },(error,response)=>{
+            if(error){
+                console.log(error);
+            }
+            return response;
         });
-        return response;
     } catch (error) {
         console.log("something went wrong at service layer due to "+error);
     }

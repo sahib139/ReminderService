@@ -2,7 +2,6 @@ const express = require("express");
 const app = express();
 const bodyParser = require("body-parser");
 
-const {sendBasicEmail} = require("./service/email-service");
 const {PORT,DB_SYNC} = require("./config/serverConfig");
 
 const setUpAndStartServer = async ()=>{
