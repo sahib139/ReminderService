@@ -23,11 +23,12 @@ class TicketRepository{
 
     async getAll(filter){
         try {
+
             const tickets = await NotificationTicket.findAll({
                 where:{
                     status:filter.status,
                     notificationTime:{
-                        [Op.lte]:new Date(),
+                        [Op.lte]:(filter.timestamp)?filter.timestamp:new Date(),
                     }
                 }
             });

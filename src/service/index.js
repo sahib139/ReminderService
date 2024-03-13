@@ -1,3 +1,3 @@
 module.exports={
-    emailService : require("./email-service"),
+    TicketAndEmailService : require("./email-service"),
 }
