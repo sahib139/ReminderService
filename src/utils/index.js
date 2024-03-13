@@ -1,3 +1,3 @@
 module.exports={
-    EmailingJob:require("./jobs/emailScheduler"),
+    EmailingJobs:require("./jobs/emailScheduler"),
 }
