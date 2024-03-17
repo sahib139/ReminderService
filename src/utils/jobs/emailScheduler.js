@@ -5,7 +5,7 @@ const { TicketAndEmailService } = require("../../service/index");
 const Service = new TicketAndEmailService();
 
 const emailScheduler = () => {
-    nodeCron.schedule('*/2 * * * *', async () => {
+    nodeCron.schedule('*/10 * * * *', async () => {
         const tickets = await Service.fetchPendingMails();
         tickets.forEach((ticket) => {
             sender.sendMail({
