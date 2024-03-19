@@ -12,7 +12,6 @@
     - `EXCHANGE_NAME = AIRLINE_BOOKING`
     - `REMINDER_BINDING_KEY = REMINDER_KEY`
     - `BOOKING_BINDING_KEY = BOOKING_KEY`
-    - `DB_SYNC = false`  -> for syncing the database initially make it true , after executing once change it to false because we don't want to do syncing every time we start the server.
 
 - Inside the `src/config` folder create a new file `config.json` and then add the following piece of json code
 
