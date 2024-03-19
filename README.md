@@ -35,8 +35,6 @@
 ```
 - DB design
     - NotificationTicket Table
-
-
 ```
 - Finally, Run the `npm start` in the root directory to run the Server.
 
